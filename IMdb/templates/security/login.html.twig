@@ -1,0 +1,47 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
+{% block title %}{% endblock %}
+
+{% block body %}
+    <div class="a-section a-spacing-medium a-text-center logo-sec">
+        <a class="a-link-nav-icon" tabindex="-1">
+            <img src="https://m.media-amazon.com/images/G/01/imdb/authportal/images/www_imdb_logo._CB667618033_.png" alt="IMDb.com logo">
+        </a>
+    </div>
+    <form method="post">
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        {#    {% if app.user %}#}
+        {#        <div class="mb-3">#}
+        {#            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>#}
+        {#        </div>#}
+        {#    {% endif %}#}
+
+        <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+        <label for="inputEmail">Email</label>
+        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+        <label for="inputPassword">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+        <input type="hidden" name="_csrf_token"
+               value="{{ csrf_token('authenticate') }}"
+        >
+
+
+        {#    <div class="form-check">#}
+        {#        <input type="checkbox" class="form-check-input" id="keepMeSignedIn" name="keepMeSignedIn">#}
+        {#        <label class="form-check-label" for="keepMeSignedIn">Keep me signed in</label>#}
+        {#    </div>#}
+        <button class="btn btn-lg btn-primary" type="submit">
+            Sign in
+        </button>
+        <br>
+        <div class="a-divider a-divider-break"><h5 aria-level="5">New to IMDb?</h5></div>
+        <span class="a-button-inner"><a id="createAccountSubmit" href="{{ path('app_register') }}" class="a-button-text button-like-link">
+                      Create your IMDb account
+                    </a></span>
+    </form>
+{% endblock %}

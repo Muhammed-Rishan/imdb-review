@@ -1,0 +1,46 @@
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
+{% block title %}{% endblock %}
+
+{% block body %}
+<div class="a-section a-spacing-medium a-text-center logo-sec">
+    <a class="a-link-nav-icon" tabindex="-1">
+        <img src="https://m.media-amazon.com/images/G/01/imdb/authportal/images/www_imdb_logo._CB667618033_.png" alt="IMDb.com logo">
+    </a>
+</div>
+
+<div class="a-box-contain">
+    <div class="a-box-inner">
+        <h1 class="head">Create account</h1>
+
+        {{ form_errors(registrationForm) }}
+
+        {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.username) }}
+        {{ form_row(registrationForm.email, {
+            'attr': {
+                'class': 'form-control',
+                'id': 'email-input'
+            }
+        }) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+
+
+
+        <button type="submit" class="btn">Create your IMDb account</button>
+        <div class="a-row">
+            Already have an account?
+            <a class="a-link-emphasis" href="{{ path('app_login') }}">
+                Sign in
+            </a>
+
+        </div>
+    {{ form_end(registrationForm) }}
+    </div>
+</div>
+{% endblock %}

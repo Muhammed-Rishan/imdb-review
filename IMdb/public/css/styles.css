@@ -1,0 +1,104 @@
+/* Apply styles to the user ratings section */
+.user-ratings {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.user-ratings h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.user-ratings ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-ratings li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+.comment-rating-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
+.form-field label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-field input[type="text"],
+.form-field select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-field textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-field button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-field button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* CSS Styles for User Comments Section */
+.user-comments-section {
+    margin-top: 20px;
+}
+
+.user-comments-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.user-comments-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-comment {
+    background-color: #f7f7f7;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Optional: Add hover effect on user comments */
+.user-comment:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+}

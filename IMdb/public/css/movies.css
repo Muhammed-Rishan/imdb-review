@@ -1,0 +1,67 @@
+/* Style the movie grid */
+.movie-grid {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+}
+
+/* Style individual movie items */
+.movie {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+}
+
+/* Style the movie poster */
+.movie-poster img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style movie details container */
+.movie-details {
+    padding: 10px;
+}
+
+/* Style movie title */
+.movie-details h2 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* Style other movie details */
+.movie-details p {
+    margin: 5px 0;
+}
+
+/* Style the "View Details" link */
+.view-details {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-details:hover {
+    background-color: #0056b3;
+}
+
+.text-end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-end h6{
+    padding-top: 10px;
+    padding-left: 90px;
+    }

@@ -1,0 +1,36 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+{% block title %}User Reviews{% endblock %}
+
+{% block body %}
+
+    {% if comments|length > 0 %}
+        <div class="user-comments-section">
+            <h2>User Comments:</h2>
+            <ul class="user-comments-list">
+                {% for comment in comments %}
+                    <li class="user-comment">{{ comment.comment }}
+                        <span class="commented-by">Commented by: {{ comment.user.username }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    {% if ratings|length > 0 %}
+        <div class="user-ratings">
+            <h2>User Ratings:</h2>
+            <ul>
+                {% for rating in ratings %}
+                    <li>{{ rating.rating }}/5 stars
+                        {% if rating.user is not null %}
+                            <span class="rated-by">Rated by: {{ rating.user.username }}</span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+{% endblock %}
